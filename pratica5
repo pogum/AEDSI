@@ -1,0 +1,46 @@
+# include <stdio.h>
+#include <math.h>
+
+double fatorial (int n)
+{
+	int i,f,z;
+	i=1;
+	f=1;
+	while (i<=n)
+	{
+		f=f*i;
+		i++;
+	}
+	return f;
+			
+}
+
+double euler (double k)
+{
+	double e;
+	int n;
+	n=1;
+	e=1;
+	
+	while (e>0.0000006)
+	{
+		e=e+1/(fatorial (n));
+		n++;
+	}
+	
+	return (e);
+}
+
+int main ()
+{
+	/*double n,z;
+	n=9;
+	z=fatorial(n);
+	printf ("%f",z);
+	system ("PAUSE");*/
+	
+	double k;
+	k=euler(k);
+	printf("OI! %f",k);
+	system("PAUSE");
+}
